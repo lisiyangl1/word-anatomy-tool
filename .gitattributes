@@ -1,0 +1,15 @@
+# 统一换行：仓库内一律 LF，检出时不做 CRLF 转换（Windows/macOS/Linux 一致）
+* text=auto eol=lf
+
+# 二进制文件不参与换行与文本差异处理
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.exe    binary
+*.zip    binary
+*.7z     binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary

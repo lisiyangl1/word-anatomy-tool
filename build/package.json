@@ -1,0 +1,16 @@
+{
+  "name": "word-anatomy-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "单词解剖台的构建与测试脚本（仅本地开发使用）",
+  "scripts": {
+    "fetch": "python fetch_dicts.py",
+    "dict": "python build_dict.py",
+    "html": "python build_html.py",
+    "test": "node test.js",
+    "domtest": "node domtest.js"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}
