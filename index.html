@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>单词解剖台 · 英文单词解析工具</title>
+<meta name="description" content="单文件、纯前端的英文单词解析工具：音标、音节拆分、词根词缀拆解、释义例句、同义词，内置 7536 条四六级词汇，离线可用。" />
+<link rel="canonical" href="./word-anatomy.html" />
+<style>
+  /* 入口页只做跳转，样式只为跳转失败/被拦截时留一个可读的着陆画面 */
+  :root {
+    --paper: #fbf8f2;
+    --ink: #24211c;
+    --muted: #7b7266;
+    --accent: #b4530a;
+    --line: #e6dfd2;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px 28px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px -18px rgba(36, 33, 28, .28);
+    text-align: center;
+  }
+  h1 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.01em; }
+  p { margin: 0 0 20px; font-size: 14px; line-height: 1.65; color: var(--muted); }
+  a.btn {
+    display: inline-block;
+    padding: 11px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    background: var(--accent);
+    border-radius: 10px;
+    transition: transform .16s ease, opacity .16s ease;
+  }
+  a.btn:hover { transform: translateY(-1px); opacity: .92; }
+  .spin {
+    width: 22px; height: 22px; margin: 0 auto 18px;
+    border: 2px solid var(--line);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } a.btn { transition: none; } }
+</style>
+<script>
+  /* 立即跳转到应用页；带上 search 与 hash，保证 ?w=word 这类深链接不丢失 */
+  location.replace('./word-anatomy.html' + location.search + location.hash);
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=./word-anatomy.html" />
+</noscript>
+</head>
+<body>
+  <main class="card">
+    <div class="spin" aria-hidden="true"></div>
+    <h1>单词解剖台</h1>
+    <p>正在打开解析工具……如果没有自动跳转，请点下面的按钮。</p>
+    <a class="btn" href="./word-anatomy.html">进入单词解剖台</a>
+  </main>
+</body>
+</html>

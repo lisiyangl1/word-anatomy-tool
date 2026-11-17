@@ -2,6 +2,7 @@
 
 > 一个单文件、纯前端的英文单词解析工具：把「音标 / 音节 / 词根词缀 / 释义例句 / 同义词」五层信息放进一屏，双击 HTML 就能用。
 
+- 在线使用：<https://lisiyangl1.github.io/word-anatomy-tool/>（GitHub Pages 托管，无需下载）
 - 交付文件：`word-anatomy.html`（约 2.3 MiB，词库已内嵌）
 - 词库规模：**7536** 个词条，覆盖 CET-4 / CET-6 全部词汇
 - 运行方式：无后端、无构建、无数据库，浏览器直接打开
@@ -266,6 +267,7 @@ com（前缀：共同；加强） + put（词根：计算；思考） + er（后
 
 ```text
 .
+├── index.html                 # Pages 入口页：秒跳转到 word-anatomy.html，保留 ?w= 参数
 ├── word-anatomy.html          # 交付主文件：词库内嵌，双击即用（约 2.3 MiB）
 ├── word-anatomy-说明.txt       # 面向使用者的中文说明（功能、扩展方式、限制）
 ├── README.md                  # 本文件：面向开发者/维护者
